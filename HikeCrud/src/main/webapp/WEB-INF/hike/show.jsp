@@ -4,13 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Film</title>
+<title>Hike</title>
 </head>
 <body>
-<div>
-<h5>${hike.name}</h5>
+<div class="container-fluid">
+<h1 class="text-center">${hike.name}</h1>
 <%-- <p>Description:  ${film.description}</p> --%>
 <%-- <p>Runtime: ${film.length} minutes</p> --%>
+<%-- <form action="updateHike.do method="POST">
+<input type="button" name="${hike.id}" value="Update Hike"/>
+</form> --%>
 </div>
 </body>
 </html>

@@ -48,5 +48,5 @@ class HikeTest {
 		assertNotNull(hike);
 		assertEquals("Saint Isabel Glacier", hike.getName());
 	}
-
+	
 }
