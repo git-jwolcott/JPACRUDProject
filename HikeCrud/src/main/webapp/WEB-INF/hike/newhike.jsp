@@ -1,52 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>My Hike Diary</title>
-<link rel="stylesheet"
+<title>Add A Hike</title><link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
 </head>
 <body>
-<div class="container-fluid">
-<h1 class="text-center">C'est Beau</h1>
-<h3>Search by Hike Id</h3>
-<form action="getHike.do" method="GET">
-Hike ID: <input type="text" name="id"/><input type="submit" value="Show Hike"/>
-</form>
-<br>
-<form action="showCreateForm.do" method="GET">
-<h3>Add a Hike</h3>
-<input type="submit" value="Add A Hike"/>
-</form>
-<br>
-<table class="table table-stripped table-hover">
-			<thead class="thead thead-dark">
-				<tr><th colspan="2"class="text-center">All Hikes</th></tr>
-				<tr>
-					<th class="text-center">Hike ID</th>
-					<th class="text-center">Trail Name</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:choose>
-					<c:when test="${! empty hikes}">
-						<c:forEach var="hike" items="${hikes}">
-						<tr class="text-center">
-						<td>${hike.id}</td>
-						<td><a href="getHike.do?id=${hike.id}">${hike.name}</a></td>
-						</tr>
-						</c:forEach>
-					</c:when>
-				</c:choose>
-			</tbody>
-		</table>
+<form action="createHike.do" method="POST">
+<div class="form-group">
+<label for="name">Hike Name</label>
+<input type="text" class="form-control" name="name" placeholder="Enter hike name">
+<input type="submit" value="Submit"/>
 </div>
+</form>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>
