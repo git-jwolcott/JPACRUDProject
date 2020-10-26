@@ -7,8 +7,28 @@
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Hike</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-light bg-light text-white">
+		<a class="navbar-brand" href="/"> <img src="logo.png" width="30"
+			height="30" alt="" loading="lazy">
+		</a>
+		<ul class="nav">
+		</ul>
+		
+		<form class="form-inline my-2 my-lg-0" action="getHike.do"
+			method="GET">
+			<input class="form-control mr-sm-2" type="text" placeholder="Hike Id"
+				aria-label="Show Hike" name="id" />
+			<button class="btn btn-light my-2 my-sm-0" type="submit" name="id"
+				value="${hike.id}">Show Hike</button>
+		</form>
+	</nav>
+	<br>
 <div class="container-fluid">
 <c:if test="${! empty hike}">
 <h1 class="text-center">${hike.name}</h1>
@@ -26,6 +46,7 @@
 		<!--This is a link bringing you to a full page G map. the trail head will be the hyperlink.  --><a
 					href="http://maps.google.com/?q=${hike.trailheadLatitude},${hike.trailheadLongitude}">${hike.name}</a>
 </c:if>
+<br><br>
 <div class="btn-group" role="group" aria-label="Button group">
 <form action="/" method="GET">
 <input type="submit" class="btn btn-outline-primary" value="Back to Main">

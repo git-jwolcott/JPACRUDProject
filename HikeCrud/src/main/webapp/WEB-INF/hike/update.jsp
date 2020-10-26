@@ -9,17 +9,6 @@
 <title class="text-center">Update Hike</title>
 </head>
 <body>
-<h1>Hike Details</h1>
-<div class="container-fluid">
-<h2>Hike Name: ${hike.name}</h2>
-<p>Location:  ${hike.location}</p>
-<p>Length: ${hike.length} miles</p>
-<p>Trailhead Latitude: ${hike.trailheadLatitude}</p>
-<p>Trailhead Longitude: ${hike.trailheadLongitude}</p>
-<p>Image Url: ${hike.imageUrl}</p>
-<p>Elevation Gain: ${hike.elevationGain} feet</p>
-<p>Route Type: ${hike.routeType}</p>
-<br>
 <h1>Changes</h1>
 <form action="updateHike.do" method="POST">
 <div class="form-group">
