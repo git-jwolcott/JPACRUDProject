@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1>Delete Hike Failed!</h1>
+<p>Either you attempted to delete hike 1-6 or there was an issue with the delete</p>
 <br>
 <div class="btn-group" role="group" aria-label="Button group">
 <form action="/" method="GET">

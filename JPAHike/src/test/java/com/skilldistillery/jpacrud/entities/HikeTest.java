@@ -47,6 +47,13 @@ class HikeTest {
 	void test() {
 		assertNotNull(hike);
 		assertEquals("Saint Isabel Glacier", hike.getName());
+		assertEquals("Brainard Lake Recreation Area", hike.getLocation());
+		assertEquals(8.40, hike.getLength());
+		assertEquals(40.07797, hike.getTrailheadLatitude());
+		assertEquals(-105.58414, hike.getTrailheadLongitude());
+		assertEquals("isabelle.png", hike.getImageUrl());
+		assertEquals(1660, hike.getElevationGain());
+		assertEquals("out and back", hike.getRouteType());
 	}
 	
 }

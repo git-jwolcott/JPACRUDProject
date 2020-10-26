@@ -12,15 +12,43 @@
 <h1>Hike Details</h1>
 <div class="container-fluid">
 <h2>Hike Name: ${hike.name}</h2>
-<%-- <p>Description:  ${hike.description}</p> --%>
-<%-- <p>Runtime: ${hike.length} minutes</p> --%>
+<p>Location:  ${hike.location}</p>
+<p>Length: ${hike.length} miles</p>
+<p>Trailhead Latitude: ${hike.trailheadLatitude}</p>
+<p>Trailhead Longitude: ${hike.trailheadLongitude}</p>
+<p>Image Url: ${hike.imageUrl}</p>
+<p>Elevation Gain: ${hike.elevationGain} feet</p>
+<p>Route Type: ${hike.routeType}</p>
 <br>
 <h1>Changes</h1>
 <form action="updateHike.do" method="POST">
 <div class="form-group">
 <label for="name">Hike Name</label>
-<input type="text" class="form-control" name="name" placeholder="Enter the name of the hike">
-<button class="btn btn-outline-primary" type="submit" name="id" value="${hike.id}">Submit</button>
+<input type="text" class="form-control" name="name" value="${hike.name}">
+<br><br>
+<label for="location">Location</label>
+<input type="text" class="form-control" name="location" value="${hike.location}">
+<br><br>
+<label for="length">Length</label>
+<input type="number" class="form-control" name="length" min="1" step="0.1" value="${hike.length}">
+<br><br>
+<label for="trailheadLatitude">Trailhead Latitude</label>
+<input type="number" class="form-control" name="trailheadLatitude" min="0" step="0.00001" value="${hike.trailheadLatitude}">
+<br><br>
+<label for="trailheadLongitude">Trailhead Longitude</label>
+<input type="number" class="form-control" name="trailheadLongitude" min="-180" step="0.00001" value="${hike.trailheadLongitude}">
+<br><br>
+<label for="imageUrl">Image Url</label>
+<input type="text" class="form-control" name="imageUrl" value="${hike.imageUrl}">
+<br><br>
+<label for="elevationGain">Elevation Gain</label>
+<input type="number" class="form-control" name="elevationGain" value="${hike.elevationGain}">
+<br><br>
+<label for="routeType">Route Type</label>
+<input type="text" class="form-control" name="routeType" value="${hike.routeType}">
+<br><br>
+
+<button class="btn btn-outline-primary" type="submit" name="id" value="0">Submit</button>
 </div>
 </form>
 <div class="btn-group" role="group" aria-label="Button group">

@@ -33,6 +33,7 @@ public class HikeDAOJpaImpl implements HikeDAO {
 	@Override
 	public Hike create(Hike hike) {
 		em.persist(hike);
+		em.flush();
 		return hike;
 	}
 
@@ -40,15 +41,29 @@ public class HikeDAOJpaImpl implements HikeDAO {
 	public Hike update(int id, Hike hike) {
 		Hike hikeToUpdate = em.find(Hike.class, id);
 		hikeToUpdate.setName(hike.getName());
+		hikeToUpdate.setLocation(hike.getLocation());
+		hikeToUpdate.setLength(hike.getLength());
+		hikeToUpdate.setTrailheadLatitude(hike.getTrailheadLatitude());
+		hikeToUpdate.setTrailheadLongitude(hike.getTrailheadLongitude());
+		hikeToUpdate.setImageUrl(hike.getImageUrl());
+		hikeToUpdate.setElevationGain(hike.getElevationGain());
+		hikeToUpdate.setRouteType(hike.getRouteType());
+		em.persist(hikeToUpdate);
+		em.flush();
 		return hikeToUpdate;
 	}
 
 	@Override
 	public boolean delete(int id) {
-		Hike hikeToDelete = em.find(Hike.class, id);
+		Hike hikeToDelete = null;
+		boolean hikeWasDeleted = false;
+		if(id > 5) {
+		hikeToDelete = em.find(Hike.class, id);
 		em.remove(hikeToDelete);
-		boolean hikeWasDeleted = !em.contains(hikeToDelete);
+		hikeWasDeleted = !em.contains(hikeToDelete);
 		return hikeWasDeleted;
+		}
+		else {return !hikeWasDeleted;}
 	}
 
 

@@ -12,10 +12,20 @@
 <div class="container-fluid">
 <c:if test="${! empty hike}">
 <h1 class="text-center">${hike.name}</h1>
-<%-- <p>Description:  ${film.description}</p> --%>
-<%-- <p>Runtime: ${film.length} minutes</p> --%>
-</c:if>
+<p>Description:  ${hike.location}</p>
+<p>Distance: ${hike.length} miles</p>
+<p>Elevation gain: ${hike.elevationGain} feet</p>
+<p>Route Type: ${hike.routeType}</p>
 <br>
+<img src="${hike.imageUrl}" style="width:300px;height:300px;">
+</div>
+<br>
+<iframe width="300" height="170" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+		src="https://maps.google.com/maps?q=${hike.trailheadLatitude },${hike.trailheadLongitude }&hl=en&z=14&amp;output=embed">
+		</iframe> <br /> 
+		<!--This is a link bringing you to a full page G map. the trail head will be the hyperlink.  --><a
+					href="http://maps.google.com/?q=${hike.trailheadLatitude},${hike.trailheadLongitude}">${hike.name}</a>
+</c:if>
 <div class="btn-group" role="group" aria-label="Button group">
 <form action="/" method="GET">
 <input type="submit" class="btn btn-outline-primary" value="Back to Main">

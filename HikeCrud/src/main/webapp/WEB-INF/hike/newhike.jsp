@@ -13,9 +13,25 @@
 <body>
 <form action="createHike.do" method="POST">
 <div class="form-group">
+<!-- <input type="hidden" class="form-control" name="id" value=0> -->
 <label for="name">Hike Name</label>
-<input type="text" class="form-control" name="name" placeholder="Enter hike name">
-<input type="submit" value="Submit"/>
+<input type="text" class="form-control" name="name" value="" placeholder="Enter hike name">
+<label for="location">Location</label>
+<input type="text" class="form-control" name="location" value ="" placeholder="Location description">
+<label for="length">Length</label>
+<input type="number" class="form-control" name="length" min="1" step="0.1" value="0" placeholder="Length in miles">
+<label for="trailheadLatitude">Trailhead Latitude</label>
+<input type="number" class="form-control" name="trailheadLatitude" min="0" step="0.00001" value="0.0" placeholder="Trail head latitude">
+<label for="trailheadLongitude">Trailhead Longitude</label>
+<input type="number" class="form-control" name="trailheadLongitude" min="-180" step="0.00001" value="0.0" placeholder="Trail head longitude">
+<label for="imageUrl">Image Url</label>
+<input type="text" class="form-control" name="imageUrl" value="" placeholder="Image URL">
+<label for="elevationGain">Elevation Gain</label>
+<input type="number" class="form-control" name="elevationGain" value="0" placeholder="Elevation Gain">
+<label for="routeType">Route Type</label>
+<input type="text" class="form-control" name="routeType" value="" placeholder="Route Type">
+<button class="btn btn-outline-primary" type="submit" name="id" value="0">Submit</button>
+<!-- <input type="submit" value="Submit"/> -->
 </div>
 </form>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

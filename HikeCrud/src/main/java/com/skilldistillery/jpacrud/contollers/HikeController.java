@@ -52,8 +52,8 @@ public class HikeController {
 	}
 	
 	@RequestMapping(path="updateHike.do")
-	public String updateHike(Model model, Hike hike) {
-		Hike hikeToUpdate = hikeDAO.update(hike.getId(), hike);
+	public String updateHike(Model model, Hike hike, Integer id) {
+		Hike hikeToUpdate = hikeDAO.update(id, hike);
 		model.addAttribute("hike", hikeToUpdate);
 		return "hike/show";
 	}
