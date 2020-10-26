@@ -7,6 +7,10 @@
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title class="text-center">Update Hike</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	crossorigin="anonymous">
 </head>
 <body>
 <h1>Changes</h1>
@@ -14,29 +18,28 @@
 <div class="form-group">
 <label for="name">Hike Name</label>
 <input type="text" class="form-control" name="name" value="${hike.name}">
-<br><br>
+<br>
 <label for="location">Location</label>
 <input type="text" class="form-control" name="location" value="${hike.location}">
-<br><br>
+<br>
 <label for="length">Length</label>
 <input type="number" class="form-control" name="length" min="1" step="0.1" value="${hike.length}">
-<br><br>
+<br>
 <label for="trailheadLatitude">Trailhead Latitude</label>
 <input type="number" class="form-control" name="trailheadLatitude" min="0" step="0.00001" value="${hike.trailheadLatitude}">
-<br><br>
+<br>
 <label for="trailheadLongitude">Trailhead Longitude</label>
 <input type="number" class="form-control" name="trailheadLongitude" min="-180" step="0.00001" value="${hike.trailheadLongitude}">
-<br><br>
+<br>
 <label for="imageUrl">Image Url</label>
 <input type="text" class="form-control" name="imageUrl" value="${hike.imageUrl}">
-<br><br>
+<br>
 <label for="elevationGain">Elevation Gain</label>
 <input type="number" class="form-control" name="elevationGain" value="${hike.elevationGain}">
-<br><br>
+<br>
 <label for="routeType">Route Type</label>
 <input type="text" class="form-control" name="routeType" value="${hike.routeType}">
-<br><br>
-
+<br>
 <button class="btn btn-outline-primary" type="submit" name="id" value="0">Submit</button>
 </div>
 </form>

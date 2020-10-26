@@ -11,6 +11,8 @@
 	crossorigin="anonymous">
 </head>
 <body>
+<h1>New Hike</h1>
+<br>
 <form action="createHike.do" method="POST">
 <div class="form-group">
 <!-- <input type="hidden" class="form-control" name="id" value=0> -->
@@ -30,6 +32,7 @@
 <input type="number" class="form-control" name="elevationGain" value="0" placeholder="Elevation Gain">
 <label for="routeType">Route Type</label>
 <input type="text" class="form-control" name="routeType" value="" placeholder="Route Type">
+<br>
 <button class="btn btn-outline-primary" type="submit" name="id" value="0">Submit</button>
 <!-- <input type="submit" value="Submit"/> -->
 </div>
